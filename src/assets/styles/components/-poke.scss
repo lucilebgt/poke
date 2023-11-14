@@ -1,0 +1,44 @@
+@use '../var';
+@use '../mixin';
+@use 'sass:color';
+
+
+
+.poke {
+    width: calc((100% - 4rem)/3);
+    background-color: color.scale(var.$colorLight, $lightness:40%);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: 3rem;
+    @include mixin.box;
+
+    &__list{
+        background-color: var.$colorLight;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        padding: 1.5rem;
+        border-bottom-left-radius:.3rem ;
+        border-bottom-right-radius:.3rem ;
+    }
+    &__title {
+    margin: 1rem;
+    text-align: center;
+    font-size: 1.5em;
+    color: var.$color;
+    @include mixin.disc(5px);
+    }
+
+    &__desc {
+        text-align: justify;
+        padding:0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    &__img{
+    width:100%;
+    height:300px;
+    object-fit: cover;
+    object-position: center center;
+    }
+}

@@ -1,0 +1,44 @@
+@use '../var';
+@use './intro';
+@use '../mixin';
+
+
+
+
+.ville {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var.$colorLight;
+    padding: 1rem 2rem;
+    @include mixin.box;
+
+    &__title {
+        font-weight: bold;
+        font-size: 3em;
+        margin-bottom: 2rem;
+    }
+
+    &__desc {
+        margin-bottom: 1rem;
+        font-size: 1.2em;
+    }
+
+    &__list {
+        display:flex;
+        justify-content: flex-start;
+
+        &__li{
+            color:#fff;
+            background-color: var.$color;
+            border-radius: 0.3rem;
+            padding: 1rem;
+            margin: 0.3rem;
+            
+        }
+        &__a{
+            color:#fff;
+        }
+    }
+}

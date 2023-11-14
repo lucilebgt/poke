@@ -1,0 +1,22 @@
+@use '../var';
+@use '../mixin';
+@use 'sass:color';
+
+
+.entete {
+    margin-top: 1rem;
+    background-color: var.$colorLight;
+    padding: 1rem 2rem;
+    @include mixin.box;
+
+    &__h1 {
+        font-weight: bold;
+        font-size: 3em;
+        margin-bottom: 2rem;
+    }
+
+    &__p {
+        font-size: 2em;
+        margin-bottom:1rem;
+    }
+}
