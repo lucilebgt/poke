@@ -1,2 +1,2 @@
 # poke
-training sass 
+apprentissage de Sass 
